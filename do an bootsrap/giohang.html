@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .box {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .card {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .btn-outline-secondary {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-outline-secondary:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-danger {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-danger:hover {
+      background-color: #dc3545;
+      color: white;
+    }
+    .btn-warning {
+      background-color: #ffc107;
+      border: none;
+    }
+    .btn-warning:hover {
+      background-color: #e0a800;
+    }
+    .rounded {
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="box text-center">
+            <img src="img/logooo.jpg" alt="" style="width: 150px;">
+            <p class="py-2">
+                <strong>Uy tín - Chất lượng - Nhanh chóng</strong>
+            </p>
+        </div>
+    </div>
+    
+  <div class="container my-5">
+    <div class="box mb-4">
+      <h2 class="d-flex justify-content-between align-items-center">
+        <span>Giỏ hàng của bạn</span>
+        <a href="doan.html" class="btn btn-link">Tiếp tục mua hàng</a>
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <!-- Sản phẩm 1 -->
+            <div class="row align-items-center mb-3">
+              <div class="col-md-2">
+                <img src="img/ctsp11.jpg" alt="Caffe sữa" class="img-fluid rounded">
+              </div>
+              <div class="col-md-4">
+                <h5 class="mb-0">CAFFE SỮA ĐÁ NGUYÊN BẢN - KAI COFFE</h5>
+                <small class="text-muted">Mã SP: 12345</small>
+              </div>
+              <div class="col-md-2">
+                <span>50.000 VND</span>
+              </div>
+              <div class="col-md-2">
+                <div class="input-group">
+                  <button class="btn btn-outline-secondary btn-sm">-</button>
+                  <input type="text" class="form-control text-center" value="1" min="1">
+                  <button class="btn btn-outline-secondary btn-sm">+</button>
+                </div>
+              </div>
+              <div class="col-md-2 text-end">
+                <button class="btn btn-danger btn-sm">Xóa</button>
+              </div>
+            </div>
+            <hr>
+            <!-- Sản phẩm 2 -->
+            <div class="row align-items-center mb-3">
+              <div class="col-md-2">
+                <img src="img/cfespesso.jpg" alt="Caffe Espresso" class="img-fluid rounded">
+              </div>
+              <div class="col-md-4">
+                <h5 class="mb-0">Cà phê Espresso</h5>
+                <small class="text-muted">Mã SP: 67890</small>
+              </div>
+              <div class="col-md-2">
+                <span>55.000 VND</span>
+              </div>
+              <div class="col-md-2">
+                <div class="input-group">
+                  <button class="btn btn-outline-secondary btn-sm">-</button>
+                  <input type="text" class="form-control text-center" value="1" min="1">
+                  <button class="btn btn-outline-secondary btn-sm">+</button>
+                </div>
+              </div>
+              <div class="col-md-2 text-end">
+                <button class="btn btn-danger btn-sm">Xóa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phần tóm tắt đơn hàng -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tóm tắt đơn hàng</h5>
+            <hr>
+            <div class="d-flex justify-content-between">
+              <span>Tạm tính:</span>
+              <span>105.000 VND</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Phí vận chuyển:</span>
+              <span>30.000 VND</span>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between fw-bold">
+              <span>Tổng cộng:</span>
+              <span>135.000 VND</span>
+            </div>
+            <button class="btn btn-warning btn-lg w-100 mt-3" data-bs-toggle="modal" data-bs-target="#orderModal">Đặt hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderModalLabel">Thông báo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Đơn hàng đang trên đường vận chuyển.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
